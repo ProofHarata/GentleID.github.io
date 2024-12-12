@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas Sesi 5-Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ISI KONTEN -->
+    <div class="container">
+      <div class="form" id="form">
+        <!-- LOGIN FORM -->
+        <div id="loginForm">
+          <header id="login">LOGIN</header>
+
+          <hr style="margin-bottom: 20px;" id="garis1">
+
+          <input type="text" placeholder="username" id="usernameInput">
+          <input type="password" placeholder="password" id="passwordInput">
+
+          <p id="text">Belum Punya Akun?<span onclick="formRegis()" id="regis">Daftar</span></p>
+
+          <button id="loginButton" onclick="onLogin()">LOGIN</button>
+        </div>
+        <!-- LOGIN FORM END -->
+
+        <!-- REGISTER FORM -->
+        <header id="registrasi">DAFTAR</header>
+
+        <hr style="margin-bottom: 20px;" id="garis">
+
+        <input type="text" placeholder="username" id="userInput">
+        <input type="password" placeholder="password" id="passInput">
+        
+        <button id="daftarButton" onclick="onDaftar()">DAFTAR</button>
+
+        <p id="text1">Sudah Punya Akun?<span onclick="formLogin()" id="login">Login</span></p>
+        <!-- REGISTER FORM END -->
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script type="application/javascript" src="data.js"></script>
+</body>
+</html>
