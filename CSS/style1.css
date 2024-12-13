@@ -47,14 +47,17 @@ nav .cart {
     transform: translate(-50%, -50%);
 }
 .hero .banner .content h1 {
+    font-family: "Roboto", sans-serif;
     font-size: 50px;
     margin: 0;
 }
 .hero .banner .content h2 {
+    font-family: "Roboto", sans-serif;
     font-size: 40px;
     margin: 10px 0;
 }
 .hero .banner .content p {
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     margin: 10px 0;
 }
@@ -261,7 +264,7 @@ nav .cart {
 }
 
 .banner-celana .content h1 span{
-    color: #ffac40;
+    color: crimson;
 }
 
 .banner-celana .content p{
@@ -278,7 +281,7 @@ nav .cart {
     padding: 1rem 3rem;
     font-size: 1.4rem;
     color: #fff;
-    background-color: #ffac40;
+    background-color: crimson;
     border-radius: 0.5rem;
     box-shadow: 1px 1px 3px rgba(1,1,3,0.5%);
 }
@@ -320,7 +323,7 @@ nav .cart {
 }
 
 .banner-sepatu .content h1 span{
-    color: #ffac40;
+    color: crimson;
 }
 
 .banner-sepatu .content p{
@@ -337,7 +340,7 @@ nav .cart {
     padding: 1rem 3rem;
     font-size: 1.4rem;
     color: #fff;
-    background-color: #ffac40;
+    background-color: crimson;
     border-radius: 0.5rem;
     box-shadow: 1px 1px 3px rgba(1,1,3,0.5%);
 }
