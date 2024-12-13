@@ -1,63 +1,43 @@
-// Ambil elemen-elemen dari DOM
-let form = document.getElementById("form");
+// FORM PEMBELIAN
+document.getElementById('btn-whatsapp').onclick = function(event) {
+    event.preventDefault(); // Mencegah form dari pengiriman default
 
-// Elemen untuk FORM REGISTER
-let registrasi = document.getElementById("registrasi");
-let garis = document.getElementById("garis");
-let text1 = document.getElementById("text1");
-let daftarButton = document.getElementById("daftarButton");
-let userInput = document.getElementById("userInput");
-let passInput = document.getElementById("passInput");
+    // Mengambil nilai dari input
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var email = document.getElementById('email').value; // Menambahkan email
+    var productId = document.getElementById('product-id').value; // Menambahkan ID produk
+    var address = document.getElementById('address').value;
 
-// Elemen untuk FORM LOGIN
-let regis = document.getElementById("regis");
-let text = document.getElementById("text");
-let login = document.getElementById("login");
-let garis1 = document.getElementById("garis1");
-let loginButton = document.getElementById("loginButton");
-let usernameInput = document.getElementById("usernameInput");
-let passwordInput = document.getElementById("passwordInput");
+    // Membuat pesan untuk WhatsApp
+    var message = "Nama: " + name + 
+                "\nNomor Telepon: " + phone + 
+                "\nEmail: " + email + // Menambahkan email ke pesan
+                "\nID Produk: " + productId + // Menambahkan ID produk ke pesan
+                "\nAlamat: " + address;
 
-// Fungsi untuk menyembunyikan dan menampilkan elemen
-function toggleDisplay(elements, display) {
-    elements.forEach(element => {
-        element.style.display = display;
-    });
-}
-
-// Inisialisasi tampilan awal
-toggleDisplay([registrasi, garis, userInput, passInput, daftarButton, text1], "none");
-
-// Fungsi untuk menampilkan form registrasi
-function formRegis() {
-    toggleDisplay([registrasi, garis, userInput, passInput, daftarButton, text1], "block");
-    toggleDisplay([text, login, garis1, loginButton, usernameInput, passwordInput], "none");
-}
-
-// Fungsi untuk menampilkan form login
-function formLogin() {
-    toggleDisplay([registrasi, garis, userInput, passInput, daftarButton, text1], "none");
-    toggleDisplay([text, login, garis1, loginButton, usernameInput, passwordInput], "block");
-}
-
-// Fungsi untuk mendaftar
-function onDaftar() {
-    localStorage.setItem("username", userInput.value);
-    localStorage.setItem("password", passInput.value);
-
-    // Sembunyikan form registrasi dan tampilkan form login
-    toggleDisplay([registrasi, garis, userInput, passInput, daftarButton, text1], "none");
-    toggleDisplay([text, login, garis1, loginButton, usernameInput, passwordInput], "block");
+    // Membuat URL WhatsApp
+    var whatsappUrl = 'https://api.whatsapp.com/send?phone=6281413263843&text=' + encodeURIComponent(message);
     
-    alert("Anda Telah Terdaftar");
-}
+    // Membuka URL WhatsApp di tab baru
+    window.open(whatsappUrl, '_blank');
+};
 
-// Fungsi untuk login
-function onLogin() {
-    if (usernameInput.value == userInput.value && passwordInput.value == passInput.value) {
-        // Redirect to another page if login is successful
-        window.location.href = 'web.html'; 
-    } else {
-        alert('Invalid username or password');
-    }
-}
+// FORM CONTACT
+document.querySelector('.contact-container button').onclick = function(event) {
+    event.preventDefault(); // Mencegah form dari pengiriman default
+
+    // Mengambil nilai dari input
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+
+    // Membuat pesan untuk WhatsApp
+    var message =   "Nama: " + name + 
+                    "\nEmail: " + email;
+
+    // Membuat URL WhatsApp
+    var whatsappUrl = 'https://api.whatsapp.com/send?phone=6281413263843&text=' + encodeURIComponent(message);
+    
+    // Membuka URL WhatsApp di tab baru
+    window.open(whatsappUrl, '_blank');
+};

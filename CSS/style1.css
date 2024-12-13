@@ -17,7 +17,13 @@ nav .navbar-brand {
     font-style: italic;
 }
 nav .navbar-brand span{
-    color: crimson;
+  color: crimson;
+}
+nav .navbar-nav {
+  margin: auto;
+}
+nav .cart {
+  color: white;
 }
 /* NAVBAR END */
 
@@ -67,20 +73,23 @@ nav .navbar-brand span{
 .productS {
     height: 80vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Mengubah ke flex-start untuk menjaga konsistensi */
     justify-content: center;
 }
+
 .product-card {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0px 0px 52px -21px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px 0px 52px -21px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 52px -21px rgba(0,0,0,0.75);
     text-align: center;
     padding: 20px;
     margin: 0 10px;
     position: relative;
     box-sizing: content-box;
+    height: 300px; /* Menetapkan tinggi tetap */
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Mengatur arah flex ke kolom */
+    justify-content: space-between; /* Menjaga jarak antar elemen */
 }
 .product-card .sale-badge {
   position: absolute;
