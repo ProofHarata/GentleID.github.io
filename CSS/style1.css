@@ -366,6 +366,14 @@ nav .cart {
   margin-bottom: 10px;
   font-size: 14px;
 }
+.footer .column h1.brand{
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: bold;
+}
+.footer .column h1 span{
+  color: crimson;
+}
 .footer .social-icons i {
   font-size: 20px;
   margin-right: 10px;

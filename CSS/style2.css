@@ -227,37 +227,45 @@ nav .cart {
     padding: 40px 20px;
     display: flex;
     justify-content: space-between;
-  }
-  .footer .column {
+}
+.footer .column {
     flex: 1;
     margin: 0 20px;
-  }
-  .footer .column h3 {
+}
+.footer .column h3 {
     font-size: 16px;
     margin-bottom: 20px;
-  }
-  .footer .column a {
+}
+.footer .column a {
     display: block;
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
     font-size: 14px;
-  }
-  .footer .social-icons i {
+}
+.footer .column h1.brand{
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: bold;
+}
+.footer .column h1 span{
+    color: crimson;
+}
+.footer .social-icons i {
     font-size: 20px;
     margin-right: 10px;
-  }
-  .footer .newsletter {
+}
+.footer .newsletter {
     max-width: 300px;
-  }
-  .footer .newsletter input[type="email"] {
+}
+.footer .newsletter input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: none;
     border-radius: 3px;
-  }
-  .footer .newsletter button {
+}
+.footer .newsletter button {
     width: 100%;
     padding: 10px;
     background-color: #e74c3c;
@@ -266,17 +274,17 @@ nav .cart {
     font-size: 14px;
     border-radius: 3px;
     cursor: pointer;
-  }
-  .bottom-bar {
+}
+.bottom-bar {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 20px;
     font-size: 12px;
-  }
-  .bottom-bar a {
+}
+.bottom-bar a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
-  }
+}
   /* FOOTER END */
