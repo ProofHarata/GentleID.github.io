@@ -63,45 +63,83 @@ function onLogin() {
 }
 
 // FORM PEMBELIAN
-document.getElementById('btn-whatsapp').onclick = function(event) {
+function sendToWhatsApp(event) {
     event.preventDefault(); // Mencegah form dari pengiriman default
 
-    // Mengambil nilai dari input
-    var name = document.getElementById('name').value;
-    var phone = document.getElementById('phone').value;
-    var email = document.getElementById('email').value; // Menambahkan email
-    var productId = document.getElementById('product-id').value; // Menambahkan ID produk
-    var address = document.getElementById('address').value;
+    // Mengambil nilai dari form
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const productId = document.getElementById('product-id').value;
+    const ukuran = document.getElementById('size').value;
+    const address = document.getElementById('address').value;
 
     // Membuat pesan untuk WhatsApp
-    var message = "Nama: " + name + 
-                "\nNomor Telepon: " + phone + 
-                "\nEmail: " + email + // Menambahkan email ke pesan
-                "\nID Produk: " + productId + // Menambahkan ID produk ke pesan
-                "\nAlamat: " + address;
+    const message = `Nama: ${name}\nNomor Telepon: ${phone}\nEmail: ${email}\nID Produk: ${productId}\nUkuran/Size: ${ukuran}\nAlamat: ${address}`;
+    
+    // Mengganti spasi dengan %20 untuk URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Nomor WhatsApp
+    const whatsappNumber = '6285893017949';
 
     // Membuat URL WhatsApp
-    var whatsappUrl = 'https://api.whatsapp.com/send?phone=6281413263843&text=' + encodeURIComponent(message);
-    
-    // Membuka URL WhatsApp di tab baru
-    window.open(whatsappUrl, '_blank');
-};
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Mengarahkan ke URL WhatsApp
+    window.open(whatsappURL, '_blank');
+}
 
 // FORM CONTACT
-document.querySelector('.contact-container button').onclick = function(event) {
-    event.preventDefault(); // Mencegah form dari pengiriman default
-
+function sendContactToWhatsApp() {
     // Mengambil nilai dari input
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
+    const email = document.getElementById('email').value;
+    const name = document.getElementById('name').value;
 
     // Membuat pesan untuk WhatsApp
-    var message =   "Nama: " + name + 
-                    "\nEmail: " + email;
+    const message = `Name: ${name}\nEmail: ${email}`;
+    
+    // Mengganti spasi dengan %20 untuk URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Nomor WhatsApp
+    const whatsappNumber = '085893017949';
 
     // Membuat URL WhatsApp
-    var whatsappUrl = 'https://api.whatsapp.com/send?phone=6281413263843&text=' + encodeURIComponent(message);
-    
-    // Membuka URL WhatsApp di tab baru
-    window.open(whatsappUrl, '_blank');
-};
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Mengarahkan ke URL WhatsApp
+    window.open(whatsappURL, '_blank');
+}
+
+// DETAIL
+function kemejaDetail() {
+    const detailElement = document.querySelector('.detail');
+    const close = document.getElementById('close');
+
+    close.onclick = function() {
+        detailElement.style.transform = 'scale(0)';
+    }
+    console.log("berhasil");
+    detailElement.style.transform = 'scale(1)';
+}
+function celanaDetail() {
+    const detailElement = document.querySelector('.detailC');
+    const close = document.getElementById('closeC');
+
+    close.onclick = function() {
+        detailElement.style.transform = 'scale(0)';
+    }
+    console.log("berhasil");
+    detailElement.style.transform = 'scale(1)';
+}
+function sepatuDetail() {
+    const detailElement = document.querySelector('.detailS');
+    const close = document.getElementById('closeS');
+
+    close.onclick = function() {
+        detailElement.style.transform = 'scale(0)';
+    }
+    console.log("berhasil");
+    detailElement.style.transform = 'scale(1)';
+}
